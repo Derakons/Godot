@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://biddqekbyiggw"]
+
+[ext_resource type="Texture2D" uid="uid://gungcp631saa" path="res://Recursos/mundo/2 Background/Day/1.png" id="1_k60ul"]
+[ext_resource type="Texture2D" uid="uid://btlds8nfiu2jf" path="res://Recursos/mundo/2 Background/Day/3.png" id="2_e10xh"]
+[ext_resource type="Texture2D" uid="uid://4fjuy2c2hwh3" path="res://Recursos/mundo/2 Background/Day/5.png" id="3_os6ul"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(229.5, 155.5)
+scale = Vector2(1.79688, 1.95988)
+texture = ExtResource("1_k60ul")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(216, 151.5)
+scale = Vector2(1.75, 1.93519)
+texture = ExtResource("2_e10xh")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+
+[node name="5" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(210, 146.5)
+scale = Vector2(1.72917, 1.90432)
+texture = ExtResource("3_os6ul")
