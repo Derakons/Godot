@@ -9,20 +9,14 @@
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
 [node name="1" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(229.5, 155.5)
-scale = Vector2(1.79688, 1.95988)
 texture = ExtResource("1_k60ul")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 
 [node name="3" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(216, 151.5)
-scale = Vector2(1.75, 1.93519)
 texture = ExtResource("2_e10xh")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 
 [node name="5" type="Sprite2D" parent="ParallaxLayer3"]
-position = Vector2(210, 146.5)
-scale = Vector2(1.72917, 1.90432)
 texture = ExtResource("3_os6ul")
