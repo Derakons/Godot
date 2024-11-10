@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://imkwoukeenhp"]
+
+[ext_resource type="Script" path="res://objetos/area_2d.gd" id="1_edfj0"]
+[ext_resource type="Texture2D" uid="uid://bhitc01mvj2cl" path="res://Recursos/mundo/3 Objects/Other/Garbage_Can1.png" id="2_4dffl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyvvt"]
+size = Vector2(15, 12)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_edfj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -5)
+shape = SubResource("RectangleShape2D_dyvvt")
+
+[node name="GarbageCan1" type="Sprite2D" parent="."]
+position = Vector2(2, -5)
+texture = ExtResource("2_4dffl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

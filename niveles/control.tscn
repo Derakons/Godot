@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://divbbbgddp3vv"]
+
+[ext_resource type="Script" path="res://Scrips/control.gd" id="1_7kl7p"]
+[ext_resource type="Texture2D" uid="uid://do2up228101j5" path="res://Recursos/mundo/2 Background/Background.png" id="2_wwvvo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7kl7p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 85.0
+offset_right = 1190.0
+offset_bottom = 638.0
+texture = ExtResource("2_wwvvo")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 219.0
+offset_right = 656.0
+offset_bottom = 302.0
+theme_override_font_sizes/font_size = 43
+text = "INICIAR"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 441.0
+offset_right = 979.0
+offset_bottom = 508.0
+theme_override_font_sizes/font_size = 43
+text = "SALIR"
+
+[node name="Opciones" type="Button" parent="."]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 328.0
+offset_right = 664.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 43
+text = "Opciones"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(733, 362)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Opciones" to="." method="_on_opciones_pressed"]

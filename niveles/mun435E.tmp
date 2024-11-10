@@ -14,8 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjwms7fxr5ht" path="res://Recursos/mundo/3 Objects/Grass/2.png" id="12_8baoq"]
 [ext_resource type="Texture2D" uid="uid://bxyqg636a7c72" path="res://Recursos/mundo/3 Objects/Grass/7.png" id="13_qvowg"]
 [ext_resource type="Texture2D" uid="uid://bkdbsnh0eh0c1" path="res://Recursos/mundo/3 Objects/Grass/5.png" id="14_o2xx4"]
-[ext_resource type="PackedScene" uid="uid://imkwoukeenhp" path="res://area_2d.tscn" id="15_auj3a"]
-[ext_resource type="PackedScene" uid="uid://dmlhn20jrgg8q" path="res://objetos/money.tscn" id="16_4appu"]
+[ext_resource type="Texture2D" uid="uid://dn7vf88kffo0v" path="res://Recursos/mundo/3 Objects/Other/Garbage_Can2.png" id="15_xajjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fl13"]
 texture = ExtResource("1_4tbfe")
@@ -503,6 +502,9 @@ physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_4fl13")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfmc5"]
+size = Vector2(20, 20.75)
+
 [node name="Mundo2" type="Node2D"]
 script = ExtResource("1_p0cpq")
 
@@ -535,7 +537,7 @@ tile_set = SubResource("TileSet_dp1l3")
 scale = Vector2(2.5, 2.5)
 
 [node name="1" type="Sprite2D" parent="."]
-position = Vector2(40, -13)
+position = Vector2(-288, 119)
 texture = ExtResource("5_t5ty8")
 
 [node name="2" type="Sprite2D" parent="."]
@@ -578,6 +580,20 @@ texture = ExtResource("14_o2xx4")
 position = Vector2(156, -50)
 texture = ExtResource("4_wvhie")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2116, -137.625)
+scale = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 3
+
+[node name="GarbageCan2" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, -1.37502)
+scale = Vector2(1.46667, 1.76923)
+texture = ExtResource("15_xajjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_mfmc5")
+
 [node name="ganar" type="Label" parent="."]
 visible = false
 texture_filter = 1
@@ -594,9 +610,3 @@ texture = ExtResource("4_wvhie")
 
 [node name="Player1" parent="." instance=ExtResource("2_0nnn0")]
 position = Vector2(2068, -136)
-
-[node name="Area2D" parent="." instance=ExtResource("15_auj3a")]
-position = Vector2(2113, -129)
-
-[node name="money" parent="." instance=ExtResource("16_4appu")]
-position = Vector2(2038, -147)

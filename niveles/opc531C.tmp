@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://86dq0ksd0rya"]
+
+[ext_resource type="Script" path="res://Scrips/opciones.gd" id="1_bignj"]
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bignj")
+
+[node name="Pantalla Completa" type="Label" parent="."]
+offset_left = 462.0
+offset_top = 298.0
+offset_right = 604.0
+offset_bottom = 321.0
+text = "Pantalla Completa"
+
+[node name="Volumen2" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 259.0
+offset_right = 582.0
+offset_bottom = 275.0
+
+[node name="Fullscreen" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 336.0
+offset_right = 558.0
+offset_bottom = 360.0
+
+[node name="Volumen" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 233.0
+offset_right = 576.0
+offset_bottom = 256.0
+text = "VOLUMEN"
+
+[connection signal="value_changed" from="Volumen2" to="." method="_on_volumen_2_value_changed"]
+[connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]

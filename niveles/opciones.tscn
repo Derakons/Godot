@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://86dq0ksd0rya"]
+
+[ext_resource type="Script" path="res://Scrips/opciones.gd" id="1_bignj"]
+[ext_resource type="Texture2D" uid="uid://gungcp631saa" path="res://Recursos/mundo/2 Background/Day/1.png" id="2_7e12v"]
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bignj")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(727, 274)
+scale = Vector2(1.97917, 2.01852)
+texture = ExtResource("2_7e12v")
+
+[node name="Pantalla Completa" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 293.0
+offset_right = 847.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Pantalla Completa"
+
+[node name="Volumen2" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 198.0
+offset_right = 754.0
+offset_bottom = 271.0
+
+[node name="Fullscreen" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 607.0
+offset_top = 362.0
+offset_right = 659.0
+offset_bottom = 410.0
+
+[node name="Volumen" type="Label" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 131.0
+offset_right = 733.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "VOLUMEN"
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 181.0
+offset_right = 955.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 43
+text = "Atras
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(723, 274)
+zoom = Vector2(2, 2)
+
+[connection signal="value_changed" from="Volumen2" to="." method="_on_volumen_2_value_changed"]
+[connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]
